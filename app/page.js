@@ -1,95 +1,60 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import {
+  Box,
+  Heading,
+  Image,
+  Text,
+  Link,
+  Button,
+  VisuallyHidden,
+} from "@chakra-ui/react";
+import Testimonial from "@/components/Testimonial";
+import AboutHero from "@/components/AboutHero";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
+    <>
+      <Box position="relative">
+        <Image src="/fruitshop.jpg" fit="cover" alt="fruit-store" />
+        <Box
+          position="absolute"
+          top="50%"
+          left="50%"
+          transform="translate(-50%, -50%)"
+          textAlign="center"
+          bg="rgba(0, 0, 0, 0.5)"
+          color="white"
+          p="4"
+          borderRadius="md"
         >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
+          <Heading size="2xl">
+            "Freshness in Every Bite, <br />
+            Live Healthy"
+          </Heading>
+          <Heading size="md" mt="4">
+            Each bite a step towards a healthier, fresher you.
+          </Heading>
+          <Link href="#scroll">
+            <Button m="5" borderRadius={"50"} colorScheme={"whiteAlpha"}>
+              Learn more
+            </Button>
+          </Link>
+        </Box>
+        <VisuallyHidden
+          position="absolute"
+          top="95%"
+          left="50%"
+          transform="translate(-50%,
+            -50%)"
+          textAlign="center"
+          id="scroll"
         >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+          <Text>test</Text>
+        </VisuallyHidden>
+      </Box>
+      <AboutHero />
+      <Box my="100px">
+        <Testimonial />
+      </Box>
+    </>
+  );
 }
