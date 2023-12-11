@@ -15,7 +15,7 @@ export default function Home() {
     <>
       <Box position="relative">
         <Image
-          src="/fruitshop.jpg"
+          src="/fruitshop.webp"
           fit="cover"
           alt="fruit-store"
           height={{ base: "400px", md: "auto" }}
