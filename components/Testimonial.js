@@ -12,13 +12,16 @@ import {
 const Testimonial = () => {
   return (
     <>
-      <Heading align="center" mb="30px" fontSize={"5xl"}>
+      <Heading align="center" mb="30px" fontSize={{ base: "3xl", md: "5xl" }}>
         Testimonials
       </Heading>
       <Box display={"flex"} justifyContent="center">
         <SimpleGrid
           spacing={8}
-          templateColumns="repeat(3, minmax(200px, 1fr))"
+          templateColumns={{
+            base: "repeat(1 , minmax(200px, 1fr))",
+            md: "repeat(3 , minmax(200px, 1fr))",
+          }}
           m="40px"
         >
           <Card boxShadow="dark-lg">

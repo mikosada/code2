@@ -17,7 +17,13 @@ const Navbar = () => {
                   height={50}
                   alt="logo-fruit"
                 />
-                <Heading color="white">Fruit Day</Heading>
+                <Heading
+                  color="white"
+                  size={{ base: "md", md: "xl" }}
+                  display={{ base: "none", md: "block" }}
+                >
+                  Fruit Day
+                </Heading>
               </HStack>
             </Link>
           </Box>
@@ -25,11 +31,12 @@ const Navbar = () => {
           <Box my="2" mx="2">
             <Link href="/About-Us">
               <Button
-                mr="10"
+                size={{ base: "sm", md: "lg" }}
+                mr={{ base: "5", md: "10" }}
                 variant="ghost"
                 color="white"
-                fontSize="16"
-                _hover={{ color: "black", fontSize: "17" }}
+                fontSize={{ base: "12", md: "14", lg: "16" }}
+                _hover={{ color: "black" }}
               >
                 About Us
               </Button>
@@ -37,11 +44,12 @@ const Navbar = () => {
 
             <Link href="/Services">
               <Button
-                mr="10"
+                size={{ base: "sm", md: "lg" }}
+                mr={{ base: "5", md: "10" }}
                 variant="ghost"
                 color="white"
-                fontSize="16"
-                _hover={{ color: "black", fontSize: "17" }}
+                fontSize={{ base: "12", md: "14", lg: "16" }}
+                _hover={{ color: "black" }}
               >
                 Products
               </Button>
@@ -49,11 +57,12 @@ const Navbar = () => {
 
             <Link href="/Teams">
               <Button
-                mr="10"
+                size={{ base: "sm", md: "lg" }}
+                mr={{ base: "5", md: "10" }}
                 variant="ghost"
                 color="white"
-                fontSize="16"
-                _hover={{ color: "black", fontSize: "17" }}
+                fontSize={{ base: "12", md: "14", lg: "16" }}
+                _hover={{ color: "black" }}
               >
                 Teams
               </Button>

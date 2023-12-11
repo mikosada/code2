@@ -14,7 +14,12 @@ export default function Home() {
   return (
     <>
       <Box position="relative">
-        <Image src="/fruitshop.jpg" fit="cover" alt="fruit-store" />
+        <Image
+          src="/fruitshop.jpg"
+          fit="cover"
+          alt="fruit-store"
+          height={{ base: "400px", md: "auto" }}
+        />
         <Box
           position="absolute"
           top="50%"
@@ -23,18 +28,23 @@ export default function Home() {
           textAlign="center"
           bg="rgba(0, 0, 0, 0.5)"
           color="white"
-          p="4"
+          p={{ base: "2", md: "4" }}
           borderRadius="md"
         >
-          <Heading size="2xl">
+          <Heading size={{ base: "md", md: "xl", lg: "2xl" }}>
             "Freshness in Every Bite, <br />
             Live Healthy"
           </Heading>
-          <Heading size="md" mt="4">
+          <Heading mt="4" size={{ base: "sm", md: "lg", lg: "xl" }}>
             Each bite a step towards a healthier, fresher you.
           </Heading>
           <Link href="#scroll">
-            <Button m="5" borderRadius={"50"} colorScheme={"whiteAlpha"}>
+            <Button
+              m="5"
+              borderRadius={"50"}
+              colorScheme={"whiteAlpha"}
+              size={{ base: "xs", md: "lg" }}
+            >
               Learn more
             </Button>
           </Link>

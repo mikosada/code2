@@ -24,7 +24,11 @@ const Products = () => {
           </Heading>
         </Box>
 
-        <Grid templateColumns="repeat(3, 1fr)" gap="6" m="10">
+        <Grid
+          templateColumns={{ base: "repeat(1, 1fr)", lg: "repeat(3, 1fr)" }}
+          gap="6"
+          m="10"
+        >
           <Card align="center">
             <CardHeader>
               <Image src="/fruitcard.jpg" w="300px" borderRadius="lg" />

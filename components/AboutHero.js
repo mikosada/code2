@@ -6,10 +6,14 @@ const AboutHero = () => {
     <>
       <Box mx="30" display={"flex"} mt="80px">
         <Box>
-          <Heading mb="4" ml="20">
+          <Heading
+            mb="4"
+            ml={{ base: "5", md: "20" }}
+            size={{ base: "lg", md: "xl" }}
+          >
             Brief history
           </Heading>
-          <Text mx="20" fontSize="lg">
+          <Text mx={{ base: "5", md: "20" }} size={{ base: "md", md: "lg" }}>
             Founded in 2005, our fruit store started small, driven by a passion
             for providing the freshest fruits to our community. What began as a
             local market stall grew into a beloved spot known for quality
@@ -23,10 +27,10 @@ const AboutHero = () => {
         </Box>
         <Image
           src="/fruit-1.jpg"
-          width={"250px"}
-          height={"250px"}
-          borderRadius={"50%"}
-          border={"4px"}
+          width={{ base: "0px", md: "250px" }}
+          height={{ base: "0px", md: "250px" }}
+          borderRadius={"full"}
+          border={{ base: "0", md: "4px" }}
           borderColor={"green.300"}
           alt="fruit-store"
         />

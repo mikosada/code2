@@ -122,7 +122,15 @@ const About = () => {
           <Heading align="center" my="2rem" size={"2xl"}>
             Company Culture
           </Heading>
-          <Grid templateColumns="repeat(3, 1fr)" gap="3rem" my="5rem">
+          <Grid
+            templateColumns={{
+              base: "repeat(1, 1fr)",
+              md: "repeat(2, 1fr)",
+              lg: "repeat(3, 1fr)",
+            }}
+            gap="3rem"
+            my="5rem"
+          >
             <Box boxShadow="dark-lg" px="5" py="3" borderRadius={20}>
               <Heading size="lg"> Embracing Freshness </Heading>
               <Text mt="5">
