@@ -18,7 +18,8 @@ export default function Home() {
           src="/fruitshop.webp"
           fit="cover"
           alt="fruit-store"
-          height={{ base: "400px", md: "auto" }}
+          width="100%"
+          height={{ base: "400px", md: "720px" }}
         />
         <Box
           position="absolute"
